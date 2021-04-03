@@ -1,0 +1,148 @@
+body, html {
+  width: 100%;
+  margin: auto;
+  min-height: 300%;
+  scroll-behavior: smooth;
+}
+
+
+.navbar {
+  /* position: absolute; */
+  width: 100%;
+  height: 150px;
+  background-color: #134984;
+  opacity: 50%;
+  border: 2px solid red;
+}
+
+.tabs {
+  position: relative;
+  display: inline-block;
+  right: 50px;
+  top: 30px;
+  margin-bottom: 10px;
+  float: right;
+  border: 1px solid black;
+  font-family: 'Roboto Slab', serif;
+}
+
+.a {
+  text-decoration: none;
+}
+
+p {
+  display: inline-block;
+  position: relative;
+  margin: 5px;
+  font-weight: bold;
+}
+
+/* Dropdown container */
+.dropdown {
+  float: right;
+}
+
+.dropdown button {
+  font-family: 'Roboto Slab', serif;
+  border: none;
+  font-size: 15px;
+  color: #313638;
+  background-color: #ffff;
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+
+}
+
+button:hover {
+  text-decoration: none;
+  color: #333333;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdownContent {
+  display: none;
+  position: relative;
+  background-color: #333;
+  border-radius: 50%;
+  max-width: 70px;
+  max-height: 70px;
+  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin: 8px;
+  overflow: hidden;
+  animation: fadeIn 1s;
+}
+
+/* Links inside dropdown */
+.dropdownContent .a2 {
+  float: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+.dropdown:hover .dropdownContent{
+  display: block;
+  align-self: center;
+  color: #ACC196;
+}
+
+.dropdown:hover > button {
+  color: #ACC196;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.graphics {
+  width: 100%;
+  min-height: 900px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+}
+
+.introVid {
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  z-index: -1;
+}
+
+.logo { /* .graphics .logo */
+  background-image: url('../images/main_images/logo.png');
+  background-size: 300px 300px;
+  background-repeat: no-repeat;
+  margin: 18% auto;
+  width: 300px;
+  height: 300px;
+  transform: translate(0, 0);
+  z-index: 99;
+}
+
+.sticky {
+  position: fixed;
+  margin-top: 0;
+  margin-left: 46%;
+  margin-right: auto;
+
+}
+
+.about {
+  width: 700px;
+  position: relative;
+  border: 1px solid black;
+  min-height: 300px;
+  float: left;
+  left: 20px;
+  top: 600px;
+  font-size: 30px;
+}
+
+#aboutText {
+  padding-left: 20px;
+  font-size: 20px;
+}
