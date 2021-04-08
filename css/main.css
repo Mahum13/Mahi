@@ -5,14 +5,28 @@ body, html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: 'GothamBold';
+  src: url('./fonts/Gotham/Gotham/Gotham-Bold.otf') format('opentype');
+}
+
+
+@font-face {
+  font-family: 'GothamBook';
+  src: url('./fonts/Gotham/Gotham/Gotham-Book.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'GothamThin';
+  src: url('./fonts/Gotham/Gotham/Gotham-Thin.otf') format('opentype');
+}
+
 
 .navbar {
-  /* position: absolute; */
+  position: absolute;
   width: 100%;
-  height: 150px;
-  background-color: #134984;
-  opacity: 50%;
-  border: 2px solid red;
+  color: white;
+  top: 800px;
 }
 
 .tabs {
@@ -22,12 +36,16 @@ body, html {
   top: 30px;
   margin-bottom: 10px;
   float: right;
-  border: 1px solid black;
-  font-family: 'Roboto Slab', serif;
+  font-family: "GothamBold";
 }
 
 .a {
   text-decoration: none;
+  color: white;
+}
+
+.a:hover {
+  color: #8edbe0;
 }
 
 p {
@@ -43,27 +61,26 @@ p {
 }
 
 .dropdown button {
-  font-family: 'Roboto Slab', serif;
+  font-family: "GothamBold";
+  color: white;
   border: none;
-  font-size: 15px;
-  color: #313638;
-  background-color: #ffff;
+  font-size: 16px;
   cursor: pointer;
   display: inline-block;
   margin: 5px;
+  background-color: transparent;
 
 }
 
 button:hover {
   text-decoration: none;
-  color: #333333;
+  color: red;
 }
 
 /* Dropdown content (hidden by default) */
 .dropdownContent {
   display: none;
   position: relative;
-  background-color: #333;
   border-radius: 50%;
   max-width: 70px;
   max-height: 70px;
@@ -84,11 +101,10 @@ button:hover {
 .dropdown:hover .dropdownContent{
   display: block;
   align-self: center;
-  color: #ACC196;
 }
 
 .dropdown:hover > button {
-  color: #ACC196;
+  color: #8edbe0;
 }
 
 @keyframes fadeIn {
@@ -101,8 +117,8 @@ button:hover {
   min-height: 900px;
   position: relative;
   overflow: hidden;
-  display: inline-block;
   text-align: center;
+  z-index: 99;
 }
 
 .introVid {
@@ -112,37 +128,184 @@ button:hover {
   z-index: -1;
 }
 
-.logo { /* .graphics .logo */
+.logo {
+  display: inline-block;
   background-image: url('../images/main_images/logo.png');
   background-size: 300px 300px;
   background-repeat: no-repeat;
-  margin: 18% auto;
+  margin-top: 18%;
+  left: auto;
+  right: auto;
   width: 300px;
   height: 300px;
-  transform: translate(0, 0);
-  z-index: 99;
+  z-index: 1;
+
 }
 
 .sticky {
-  position: fixed;
-  margin-top: 0;
-  margin-left: 46%;
+  margin-left: auto;
   margin-right: auto;
-
+  position: fixed;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .about {
-  width: 700px;
+  width: 900px;
   position: relative;
-  border: 1px solid black;
+  display: inline-block;
   min-height: 300px;
   float: left;
-  left: 20px;
-  top: 600px;
+  left: 50px;
+  margin-top: 40px;
   font-size: 30px;
+  z-index: -99;
+
 }
 
 #aboutText {
-  padding-left: 20px;
   font-size: 20px;
+  line-height: 25px;
+  color: white;
+  font-family: 'GothamBook';
+  z-index: -99;
+}
+
+#aboutHeading {
+  font-family: "GothamBold";
+  color: white;
+  padding-bottom: 10px;
+  font-size: 40px;
+  z-index: -99;
+}
+
+.teamDiv {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 20px;
+  min-height: inherit;
+}
+
+.teamHeading {
+  font-family: "GothamBold";
+  color: white;
+  margin: 30px;
+  font-size: 50px;
+  text-align: center;
+  z-index: -100;
+}
+
+.imgbreak1 {
+  display: inline-block;
+  position: relative;
+  min-height: 510px;
+  width: 100%;
+  margin-top: 20px;
+  background-image: url('../images/main_images/imgbreak1.jpg');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -99;
+}
+
+.teamContainer {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: inherit;
+  float: left;
+  margin-left: 20%;
+  z-index: -99;
+}
+
+.circular {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-image: url('../images/main_images/heba.jpg');
+  background-size: contain;
+  background-position: 30px;
+}
+
+
+.teamName {
+  display: inline-block;
+  padding-top: 15px;
+  font-family: "GothamBold";
+  font-size: 20px;
+  color: white;
+}
+
+.position {
+  position: relative;
+  padding-top: 10px;
+  font-family: "GothamBook";
+  font-size: 15px;
+  color: white;
+}
+
+#memberText {
+  padding-top: 8px;
+  font-family: "GothamThin";
+  font-size: 20px;
+  color: white;
+}
+
+.imgbreak2 {
+  display: inline-block;
+  position: relative;
+  min-height: 510px;
+  width: 100%;
+  margin-top: 20px;
+  background-image: url('../images/main_images/imgbreak2.jpg');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -99;
+}
+
+#projects {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  padding-top: 60px;
+  padding-left: 100px;
+  padding-bottom: 80px;
+  grid-template-columns: repeat(auto-fit, 350px);
+  /* grid-template-columns: repeat(auto-fit, [col-start] minmax(20px, 1fr) [col-end]); */
+  grid-gap: 0px;
+}
+
+.smallGrid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(1px; 1fl));
+  grid-gap: 10px;
+  width: 200px;
+}
+
+.circ {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  background-image: url('../images/main_images/imap.png');
+  background-repeat: no-repeat;
+  background-position: 11px;
+  background-size: 180px 180px;
+  border: 1px solid #8edbe0;
 }
