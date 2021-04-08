@@ -1,6 +1,6 @@
-$(document).ready(function(){
-    $(this).scrollTop(0);
-});
+// $(document).ready(function(){
+//     $(this).scrollTop(0);
+// });
 
 function logoScroll() {
   // Get width of logo
@@ -15,6 +15,7 @@ function logoScroll() {
   // calculate diff and how many pixels to zoom per pixel scrolled
   var widthDiff = imgWidth - widthAtMax;
   var pixelsPerScroll = (widthDiff / maxScrollDistance);
+  var offset = $('.logo').offset();
 
   $(window).scroll(function() {
     // the currently scrolled to position - maxout at maxScrollDistance
@@ -28,8 +29,15 @@ function logoScroll() {
 
     // set the width
     $('.logo').css('background-size', zoomedWidth);
+
+
+    var st = $('.logo').scrollTop();
+    $('.logo').css('left', st + offset.left);
+
+
   });
 }
+
 
 function logoStick() {
   var img = document.getElementById('logoDiv');
@@ -37,10 +45,15 @@ function logoStick() {
   window.onscroll = function() {stickyFunc(img, sticky)};
 }
 
-function navbarSticky() {
-  // var bar = document.getElementById('navigationBar');
-  // var sticky = bar.offsetTop;
-  // window.onscroll = function() {stickyFunc(bar, sticky)};
+
+function navbarStick() {
+  var maxScroll = 10;
+  var top = $(document).scrollTop();
+  if (top >= maxScroll) {
+    $('.navbar').css({position: 'fixed', top: '45px'});
+  } else {
+    $('.navbar').css({position: 'absolute', top: '30px'});
+  }
 }
 
 function stickyFunc(id, sticky) {
@@ -50,7 +63,6 @@ function stickyFunc(id, sticky) {
     id.classList.remove("sticky");
   }
 }
-
 
 // Fix the video at a certain point
 function fixedDiv() {
@@ -65,7 +77,7 @@ function fixedDiv() {
     var test = vid.pageYOffset;
 
     var maxScroll = vid.clientHeight - height;
-    var stop = -maxScroll;
+    var stop = -(maxScroll - 25);
 
     var scrollTopPos = Math.min(maxScroll, $(document).scrollTop());
     if (scrollTopPos >= maxScroll) {
