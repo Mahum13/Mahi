@@ -14,51 +14,101 @@
         <video id="vid" preload="" autoplay="" muted="" playsinline="" loop="" width="100%">
           <source src="./images/main_images/fish.mp4" type="video/mp4">
         </video>
-        <!-- <script>fixedDiv()</script> -->
       </div>
+      <!-- NAV BAR -->
+      <div id="navigationBar" class="navbar">
+        <div class="tabs">
+          <a class="a">HOME</a>
+          <p>|</p>
+          <a class="a" href= "#aboutContainer">ABOUT US</a>
+          <p>|</p>
+          <a class="a" href="#team">OUR TEAM</a>
+          <p>|</p>
+          <a class="a" href="#projects">PROJECTS</a>
+          <p>|</p>
+          <a class="a">NEWSLETTER</a>
+          <p>|</p>
+          <div class="dropdown">
+            <button>CONTACT US</button>
+            <a class="dropdownContent a2" href="https://www.instagram.com/mahi.org.pk/?hl=en" target="_blank"><img src="./images/main_images/icons/instagram.png" style="width: 60px; height: 60px; margin: 5px; cursor: pointer;"></a>
+            <a class="dropdownContent a2" href="https://www.facebook.com/MAHI.org.pk/" target="_blank"><img src="./images/main_images/icons/facebook.png" style="width: 60px; height: 60px; margin: 5px; cursor: pointer;"></a>
+            <a class="dropdownContent a2" target="_blank"><img src="./images/main_images/icons/mail.png" style="width: 60px; height: 60px; margin: 5px; cursor: pointer;"></a>
+            <a class="dropdownContent a2" target="_blank"><img src="./images/main_images/icons/linkedin.png" style="width: 60px; height: 60px; margin: 5px; cursor: pointer;"></a>
+          </div>
+        </div>
+        <script>navbarStick()</script>
+      </div>
+      <!-- END OF NAV BAR -->
+
       <div id="logoDiv" class="logo">
         <script>logoScroll(); logoStick()</script>
       </div>
       <script>fixedDiv()</script>
     </div>
+  </head>
 
-
-
-    <!-- <div style="position: relative; width: 100%; height: 25px; background-color: #134984;"> -->
-    <!-- NAV BAR -->
-    <div id="navigationBar" class="navbar">
-      <div class="tabs">
-        <a class="a">HOME</a>
-        <p>|</p>
-        <a class="a">ABOUT US</a>
-        <p>|</p>
-        <a class="a">SERVICES</a>
-        <p>|</p>
-        <a class="a">IMAP</a>
-        <p>|</p>
-        <a class="a">NEWSLETTER</a>
-        <p>|</p>
-        <div class="dropdown">
-          <button>CONTACT US</button>
-          <a class="dropdownContent a2" href="https://twitter.com/zainabhusainn" target="_blank"><img src="./images/main_images/instagram.png" style="width: 60px; height: 60px; margin: 5px; cursor: pointer;"></a>
-          <a class="dropdownContent a2" href="https://twitter.com/zainabhusainn" target="_blank"><img src="./images/main_images/facebook.png" style="width: 60px; height: 60px; margin: 5px; cursor: pointer;"></a>
-          <a class="dropdownContent a2" href="https://twitter.com/zainabhusainn" target="_blank"><img src="./images/main_images/email.png" style="width: 60px; height: 60px; margin: 5px; cursor: pointer;"></a>
-          <a class="dropdownContent a2" href="https://twitter.com/zainabhusainn" target="_blank"><img src="./images/main_images/linkedin.png" style="width: 60px; height: 60px; margin: 5px; cursor: pointer;"></a>
-        </div>
+  <body style="background-color: #134b86;">
+    <!-- ABOUT US -->
+    <div id="aboutContainer" class="about">
+      <div id="aboutHeading">ABOUT US</div>
+      <div id="aboutText">The Maritime Archaeology and Heritage Institute (MAHI) is a non-profit, autonomous research organisation dedicated to the investigation and preservation of maritime cultural heritage in the Western Indian Ocean.<br style="line-height: 10px;"><br>
+        Based in Pakistan, MAHI is led by international experts in the fields of maritime archaeology and cultural heritage management, who bring with them decades of operational experience on cultural heritage projects in the Indian Ocean and Asia-Pacific regions.<br style="line-height: 10px;"><br>
+        The exploration and study of maritime archaeological sites requires highly specialised technical and professional skills in every stage of investigation, from initial archaeological and geophysical surveys, to more complex documentation techniques in terrestrial and underwater environments, to the conservation, interpretation and management of new discoveries for a diverse audience. As such research has not previously been undertaken in Pakistan, MAHI aims to draw on a broad network of multidisciplinary regional and international experts to deliver on its research objectives.<br style="line-height: 10px;"><br>
+        MAHI supports the aims of the UNESCO Convention for the Protection of the Underwater Cultural Heritage and the United Nations Decade of Ocean Science for Sustainable Development (2021-2030).
       </div>
-      <script>navbarSticky()</script>
     </div>
 
-    <!-- END OF NAV BAR -->
-  </head>
-  <body style="background-color: #134b86;">
+    <!-- #1 IMAGE BREAK -->
+    <div class="imgbreak1"></div>
 
+    <!-- OUR TEAM -->
+    <div id="team" class="teamHeading">OUR TEAM</div>
+    <div class="teamDiv">
+    <!-- TEAM MEMBER 1 -->
+      <div class="teamContainer">
+        <div class="circular"></div>
+        <div class="teamName">Heba Hashmi</div>
+        <div class="position">CEO</div>
+        <br style="line-height: 7px"><br>
+        <div id="memberText">Heba Hashmi (Co-founder/CEO, MAHI) is a Maritime Archaeologist and Heritage Manager, with 7 years experience of working in heritage management in Pakistan. After completing her Masters in Cultural Heritage Studies/Managing Archaeological Sites
+          from University College London in 2014, she worked as Assistant Director at the Endowment Fund Trust for Preservation of the Heritage of Sindh, and was actively involved in documentation projects across
+          the province. In 2015, she began working as Heritage Coordinator at the Aga Khan Cultural Service - Pakistan, and later as Project Development Officer at the Aga Khan Trust for Culture in Geneva, a role which involved coordinating the Silk Roads Responsible Tourism Initiative in Gilgit Baltistan and Chitral.<br style="line-height: 10px;"><br>
+          In 2019, Heba received her fieldwork training certificates in Maritime Archaeology from the Balkan Heritage Field School in Nessebar, Bulgaria, the International Center for Underwater Archaeology in Zadar, Croatia and the Nautical Archaeology Society, UK. She then moved back to Karachi, Pakistan to begin establishing a platform for Maritime Archaeology for the first time in the country.</div>
+      </div>
+
+      <!-- TEAM MEMBER 2 -->
+      <div class="teamContainer" style="float: right; margin-right: 20%;">
+        <div class="circular" style="background-image: url('images/main_images/amer.jpg'); background-repeat: no-repeat; background-size: 160%; background-position: -90px;"></div>
+        <div class="teamName">Amer Bazl Khan</div>
+        <div class="position">Director</div>
+        <br style="line-height: 7px"><br>
+        <div id="memberText">Amer Bazl Khan (Co-founder/Director, MAHI) is a Maritime Archaeologist with over 15 years of experience in Australia and the broader Asia-Pacific region. Prior to moving back to Pakistan, Amer was the Principal Archaeologist for the State of Queensland at the Government Department of Environment and Science, where he led
+          the Department’s maritime and terrestrial archaeology teams responsible for the administration of State and Commonwealth heritage legislation. Amer has worked on numerous maritime archaeological projects in Australia and the Asia Pacific region, including working with UNESCO to develop regional capacity for the management of underwater cultural heritage.<br style="line-height: 10px;"><br>
+          Amer has a Masters of Arts Degree in Maritime Archaeology from Flinders University in Australia and a Bachelor of Science Degree from Yale University in the US. He is also an Adjunct Research Associate with the Department of Archaeology at Flinders University.
+        </div>
+      </div>
+    </div>
+
+    <!-- #2 IMAGE BREAK -->
+    <div class="imgbreak2">hi</div>
+
+    <!-- PROJECTS -->
+    <div id="projects">
+      <div id="team" class="teamHeading">PROJECTS</div>
+      <div class="grid-container">
+        <div class="smallGrid">
+          <div class="circ"></div>
+          <div class="teamName" style="text-align: center;">IMAP - Phase I</div>
+        </div>
+        <div class="smallGrid">
+          <div class="circ"></div>
+          <div class="teamName" style="text-align: center;">IMAP - Phase II</div>
+        </div>
+      </div>
+
+    </div>
   </body>
 
-    <!-- <div class="about">ABOUT US
-      <div id="aboutText">This is the about us section
-      </div>
-    </div> -->
 
 
 </html>
