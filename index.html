@@ -8,45 +8,110 @@
     <script language="JavaScript" type="text/javascript" src="js/main.js"></script>
 
     <!-- <script src="scripts/jquery-scrollfofixed-min.js" type="text/javascript"></script> -->
+    <link rel="icon" href="./images/main_images/logo.png">
+
     <title>MAHI - The Maritime Archaeology and Heritage Institute</title>
     <div id="graphicsContainer" class="graphics">
       <div id="introVideo" class="introVid">
-        <video id="vid" preload="" autoplay="" muted="" playsinline="" loop="" width="100%">
+        <video id="vid" preload="" autoplay="" muted="" playsinline="" loop="">
           <source src="./images/main_images/fish.mp4" type="video/mp4">
         </video>
       </div>
+      <a href="index.html" id="logoDiv" class="logo"></a>
+      <script>logoScroll(); logoStick()</script>
       <!-- NAV BAR -->
       <div id="navigationBar" class="navbar">
         <div class="tabs">
-          <a class="a">HOME</a>
+          <a class="a" href="index.html">HOME</a>
           <p>|</p>
-          <a class="a" href= "#aboutContainer">ABOUT US</a>
+          <div class="dropdown">
+            <div class="a">ABOUT US</div>
+            <div class="dropdown-container">
+                <a class="dropdown-about" href="mission-statement.html" target="_blank">MISSION STATEMENT</a>
+                <a class="dropdown-about" href="images/main_images/MAHI_Profile_Document_2021.pdf" target="_blank" style="margin-top: 10px;">CAPABILITY STATEMENT</a>
+                <a class="dropdown-about" href="images/main_images/coe.pdf" target="_blank" style="margin-top: 10px;">CODE OF ETHICS</a>
+            </div>
+          </div>
           <p>|</p>
           <a class="a" href="#team">OUR TEAM</a>
           <p>|</p>
-          <a class="a" href="#projects">PROJECTS</a>
-          <p>|</p>
-          <a class="a">NEWSLETTER</a>
+          <div class="dropdown">
+            <a class="a" href="#projects">PROJECTS</a>
+            <div class="dropdown-container">
+              <a class="dropdown-about" style="min-width: 60px; left: 5px; top: 5px;" href="imap.html" target="_blank">IMAP PHASE I</a>
+              <a class="dropdown-about" style="min-width: 60px; left: 5px; top: 15px;" href="imap-phase2.html" target="_blank">IMAP PHASE II</a>
+            </div>
+          </div>
           <p>|</p>
           <div class="dropdown">
-            <button>CONTACT US</button>
-            <a class="dropdownContent a2" href="https://www.instagram.com/mahi.org.pk/?hl=en" target="_blank"><img src="./images/main_images/icons/instagram.png" style="width: 60px; height: 60px; margin: 5px; cursor: pointer;"></a>
-            <a class="dropdownContent a2" href="https://www.facebook.com/MAHI.org.pk/" target="_blank"><img src="./images/main_images/icons/facebook.png" style="width: 60px; height: 60px; margin: 5px; cursor: pointer;"></a>
-            <a class="dropdownContent a2" target="_blank"><img src="./images/main_images/icons/mail.png" style="width: 60px; height: 60px; margin: 5px; cursor: pointer;"></a>
-            <a class="dropdownContent a2" target="_blank"><img src="./images/main_images/icons/linkedin.png" style="width: 60px; height: 60px; margin: 5px; cursor: pointer;"></a>
+            <div class="a">CONTACT US</div>
+            <div class="dropdown-container" style="left: 20px">
+              <a class="dropdown-contact" href="https://www.instagram.com/mahi.org.pk/?hl=en" target="_blank"><img src="./images/main_images/icons/instagram.png" style="height: 60px; width: 60px;"></a>
+              <a class="dropdown-contact" href="https://www.facebook.com/MAHI.org.pk/" target="_blank"><img src="./images/main_images/icons/facebook.png" style="height: 60px; width: 60px;"></a>
+              <a class="dropdown-contact" href="https://www.linkedin.com/company/mahi-org-pk/" target="_blank"><img src="./images/main_images/icons/linkedin.png" style="height: 60px; width: 60px;"></a>
+              <a class="dropdown-contact" href="mailto: info@mahi.org.pk" target="_blank"><img src="./images/main_images/icons/mail.png" style="height: 60px; width: 60px;"></a>
+            </div>
           </div>
         </div>
         <script>navbarStick()</script>
       </div>
+
+
       <!-- END OF NAV BAR -->
 
-      <div id="logoDiv" class="logo">
-        <script>logoScroll(); logoStick()</script>
+      <!-- SIDE NAV BAR -->
+      <div id="sidenavbar" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- HOME -->
+        <a href="index.html">HOME</a>
+        <div style="height: 1px; width: 79%; margin-left: 25px; background-color: white;"></div>
+        <!-- ABOUT US -->
+        <a href="#aboutUs" style="margin-left: 30px; margin-bottom: 0; display: inline-block;">ABOUT US</a>
+        <span>
+          <button id="sidenav-about-btn-open" class="arrow-down" onclick="openSidenavDrop('sidenav-about-container', 'sidenav-about-btn-open', 'sidenav-about-btn-close')"></button>
+          <button id="sidenav-about-btn-close" class="arrow-up" onclick="closeSidenavDrop('sidenav-about-container', 'sidenav-about-btn-open', 'sidenav-about-btn-close')"></button>
+        </span>
+        <div id="sidenav-about-container" class="sidenav-dropdown-container">
+          <a class="sidenav-dropdown-content" href="mission-statement.html" target="_blank">MISSION STATMENT</a>
+          <a class="sidenav-dropdown-content" href="images/main_images/MAHI_Profile_Document_2021.pdf" target="_blank">CAPABILITY STATMENT</a>
+          <a class="sidenav-dropdown-content" href="images/main_images/coe.pdf" target="_blank">CODE OF ETHICS</a>
+        </div>
+        <div style="height: 1px; width: 79%; margin-left: 25px; background-color: white;"></div>
+        <!-- OUR TEAM -->
+        <a href="#team">OUR TEAM</a>
+        <div style="height: 1px; width: 79%; margin-left: 25px; background-color: white;"></div>
+
+        <!-- PROJECTS -->
+        <a href="#projects" style="margin-left: 30px; margin-bottom: 0; display: inline-block;">PROJECTS</a>
+        <span>
+          <button id="sidenav-project-btn-open" class="arrow-down" onclick="openSidenavDrop('sidenav-project-container', 'sidenav-project-btn-open', 'sidenav-project-btn-close')"></button>
+          <button id="sidenav-project-btn-close" class="arrow-up" onclick="closeSidenavDrop('sidenav-project-container', 'sidenav-project-btn-open', 'sidenav-project-btn-close')"></button>
+        </span>
+        <div id="sidenav-project-container" class="sidenav-dropdown-container">
+          <a class="sidenav-dropdown-content" href="imap.html" target="_blank">IMAP PHASE I</a>
+          <a class="sidenav-dropdown-content" href="imap-phase2.html" target="_blank">IMAP PHASE II</a>
+        </div>
+        <div style="height: 1px; width: 79%; margin-left: 25px; background-color: white;"></div>
+        <!-- CONTACT US -->
+        <a href="#contactUs" style="margin-left: 30px; margin-bottom: 0; display: inline-block;">CONTACT US</a>
+        <div class="sidenav-contact">
+          <a class="sidenav-contact-img" href="https://www.instagram.com/mahi.org.pk/?hl=en" target="_blank"><img src="./images/main_images/icons/instagram.png" style="width: 60px; height: 60px;"></a>
+          <a class="sidenav-contact-img" href="https://www.facebook.com/MAHI.org.pk/" target="_blank"><img src="./images/main_images/icons/facebook.png" style="width: 60px; height: 60px;"></a>
+          <a class="sidenav-contact-img" href="https://www.linkedin.com/company/mahi-org-pk/" target="_blank"><img src="./images/main_images/icons/linkedin.png" style="width: 60px; height: 60px;"></a>
+          <a class="sidenav-contact-img" href="mailto: info@mahi.org.pk" target="_blank"><img src="./images/main_images/icons/mail.png" style="width: 60px; height: 60px;"></a>
+        </div>
+        <div style="height: 1px; width: 79%; margin-left: 25px; background-color: white;"></div>
       </div>
+      <div class="openSidenav"style="display: none; position: relative; float: left; left: 45px; top: 65px; font-size: 50px; color: white; cursor: pointer;" onclick="openNav()">&#9776;</div>
+      <script>
+        window.addEventListener("resize", resizeNavbar);
+        window.onload = adjustOnload();
+      </script>
+      <!-- END OF SIDE NAVBAR -->
+      <!-- <script>logoScroll(); logoStick()</script> -->
       <script>fixedDiv()</script>
     </div>
   </head>
-
   <body style="background-color: #134b86;">
     <!-- ABOUT US -->
     <div id="aboutContainer" class="about">
@@ -63,51 +128,160 @@
 
     <!-- OUR TEAM -->
     <div id="team" class="teamHeading">OUR TEAM</div>
-    <div class="teamDiv">
+
     <!-- TEAM MEMBER 1 -->
-      <div class="teamContainer">
+    <div class="teamDiv">
+      <div class="memberContainer">
         <div class="circular"></div>
         <div class="teamName">Heba Hashmi</div>
         <div class="position">CEO</div>
-        <br style="line-height: 7px"><br>
-        <div id="memberText">Heba Hashmi (Co-founder/CEO, MAHI) is a Maritime Archaeologist and Heritage Manager, with 7 years experience of working in heritage management in Pakistan. After completing her Masters in Cultural Heritage Studies/Managing Archaeological Sites
+      </div>
+      <div class="memberText">Heba Hashmi (Co-founder/CEO, MAHI) is a Maritime Archaeologist and Heritage Manager, with 7 years experience of working in heritage management in Pakistan. After completing her Masters in Cultural Heritage Studies/Managing Archaeological Sites
           from University College London in 2014, she worked as Assistant Director at the Endowment Fund Trust for Preservation of the Heritage of Sindh, and was actively involved in documentation projects across
           the province. In 2015, she began working as Heritage Coordinator at the Aga Khan Cultural Service - Pakistan, and later as Project Development Officer at the Aga Khan Trust for Culture in Geneva, a role which involved coordinating the Silk Roads Responsible Tourism Initiative in Gilgit Baltistan and Chitral.<br style="line-height: 10px;"><br>
-          In 2019, Heba received her fieldwork training certificates in Maritime Archaeology from the Balkan Heritage Field School in Nessebar, Bulgaria, the International Center for Underwater Archaeology in Zadar, Croatia and the Nautical Archaeology Society, UK. She then moved back to Karachi, Pakistan to begin establishing a platform for Maritime Archaeology for the first time in the country.</div>
+          In 2019, Heba received her fieldwork training certificates in Maritime Archaeology from the Balkan Heritage Field School in Nessebar, Bulgaria, the International Center for Underwater Archaeology in Zadar, Croatia and the Nautical Archaeology Society, UK. She then moved back to Karachi, Pakistan to begin establishing a platform for Maritime Archaeology for the first time in the country.
       </div>
+    </div>
 
-      <!-- TEAM MEMBER 2 -->
-      <div class="teamContainer" style="float: right; margin-right: 20%;">
+    <div style="position: relative; margin-top: 10px; margin-bottom: 10px; max-width:95%; height: 1px; margin-right: auto; margin-left: auto; background-color: white;"></div>
+
+    <!-- TEAM MEMBER 2 -->
+    <div class="teamDiv" style="margin-top: 50px;">
+      <div class="memberContainer" style="float: right; margin-right: 60px;">
         <div class="circular" style="background-image: url('images/main_images/amer.jpg'); background-repeat: no-repeat; background-size: 160%; background-position: -90px;"></div>
         <div class="teamName">Amer Bazl Khan</div>
         <div class="position">Director</div>
-        <br style="line-height: 7px"><br>
-        <div id="memberText">Amer Bazl Khan (Co-founder/Director, MAHI) is a Maritime Archaeologist with over 15 years of experience in Australia and the broader Asia-Pacific region. Prior to moving back to Pakistan, Amer was the Principal Archaeologist for the State of Queensland at the Government Department of Environment and Science, where he led
-          the Department’s maritime and terrestrial archaeology teams responsible for the administration of State and Commonwealth heritage legislation. Amer has worked on numerous maritime archaeological projects in Australia and the Asia Pacific region, including working with UNESCO to develop regional capacity for the management of underwater cultural heritage.<br style="line-height: 10px;"><br>
-          Amer has a Masters of Arts Degree in Maritime Archaeology from Flinders University in Australia and a Bachelor of Science Degree from Yale University in the US. He is also an Adjunct Research Associate with the Department of Archaeology at Flinders University.
-        </div>
+      </div>
+      <div class="memberText">Amer Bazl Khan (Co-founder/Director, MAHI) is a Maritime Archaeologist with over 17 years of experience in Australia and the broader Asia-Pacific region. Prior to moving back to Pakistan, Amer was the Principal Archaeologist for the State of Queensland at the Government Department of Environment and Science, where he led the Department's maritime and terrestrial archaeology
+        teams responsible for the administration of State and Commonwealth heritage legislation. Amer has worked on numerous maritime archaeological projects in Australia and the Asia Pacific region, including working with UNESCO to develop regional capacity for the management of underwater cultural heritage.
+        <br style="line-height: 10px;">
+        <br>
+        Amer has a Masters of Arts Degree in Maritime Archaeology from Flinders University in Australia and a Bachelor of Science Degree from Yale University in the US. He is a member of the International Committee on the Underwater Cultural Heritage (ICUCH), an international scientific committee for the International Council on Monuments and Sites (ICOMOS) as well as a member of the ICOMOS Pakistan National Committee.
       </div>
     </div>
 
     <!-- #2 IMAGE BREAK -->
-    <div class="imgbreak2">hi</div>
+    <div class="imgbreak2"></div>
 
     <!-- PROJECTS -->
     <div id="projects">
-      <div id="team" class="teamHeading">PROJECTS</div>
-      <div class="grid-container">
-        <div class="smallGrid">
-          <div class="circ"></div>
-          <div class="teamName" style="text-align: center;">IMAP - Phase I</div>
+      <div class="imap-container">
+         <div class="imap-text">
+           <div class="imap-heading"><h2>IMAP</h2></div>
+           <br>
+           <div class="imap-txt">The Inventory of Maritime Archaeology in Pakistan (IMAP) is a multi-phase project that aims to document the endangered maritime archaeology and heritage of the coastline and the Indus deltaic region of Southern Pakistan.</div>
+         </div>
+         <div class="imap-phase-container">
+           <div class="smallGrid" style="display: inline-block; width: 150px;">
+             <div id="phase-tag" class="teamName" style="font-size: 18px; text-align: center; margin-bottom: 20px;"><a href="imap.html" style="text-decoration: none; color: white">PHASE I</a></div>
+              <a href="imap.html"><div id="phase-circ" class="circ" style="width: 150px; height: 150px; background-image: url('./images/main_images/partners/eft.png'); background-position: 0; background-size: 150px;"></div></a>
+           </div>
+           <div class="smallGrid" style="display: inline-block; width: 150px;">
+             <div id="phase-tag" class="teamName" style="font-size: 18px; animation-delay: 0.2s; margin-bottom: 20px; text-align: center;"><a href="#" style="text-decoration: none; color: white">PHASE II</a></div>
+              <a href="imap-phase2.html"><div id="phase-circ" class="circ" style="width: 150px; height: 150px; animation-delay: 0.2s; background-image: url('./images/main_images/partners/arcadia.png'); background-position: center; background-size: 120px;"></div></a>
+           </div>
+         </div>
+      </div>
+    </div>
+
+    <!-- PARTNERS -->
+    <div id="partners">
+      <div class="teamHeading">PARTNERS</div>
+      <div class="grid-container" style="grid-template-columns: repeat(auto-fit, 265px);">
+        <div class="smallGrid" style="margin-bottom: 20px; width: 190px;">
+          <a onclick="partnersModal(0)"><div class="circ" style="cursor: pointer; background-image: url('./images/main_images/partners/arcadia.png'); background-size: 170px 170px; width: auto; background-position: 9px 16px"></div></a>
+          <div class="teamName" style="text-align: center; cursor: pointer;"><a onclick="partnersModal(0)" style="text-decoration: none; color: white;">ARCADIA</a></div>
         </div>
-        <div class="smallGrid">
-          <div class="circ"></div>
-          <div class="teamName" style="text-align: center;">IMAP - Phase II</div>
+        <div class="smallGrid" style="margin-bottom: 20px; width: 190px;">
+          <a onclick="partnersModal(1)"><div class="circ" style="background-image: url('./images/main_images/partners/eft.png'); background-size: 170px 170px; width: auto;"></div></a>
+          <div class="teamName" style="text-align: center; cursor: pointer;"><a onclick="partnersModal(1)" style="text-decoration: none; color: white;">EFT</a></div>
+        </div>
+        <div class="smallGrid" style="margin-bottom: 20px; width: 190px;">
+          <a href="https://www.nauticalarchaeologysociety.org/" target="_blank"><div class="circ" style="background-image: url('./images/main_images/partners/nas.png'); background-size: 170px 170px; width: auto; background-position: 9px 14px"></div></a>
+          <div class="teamName" style="text-align: center;"><a href="https://www.nauticalarchaeologysociety.org/" target="_blank" style="text-decoration: none; color: white;">NAS</a></div>
+        </div>
+        <div class="smallGrid" style="margin-bottom: 20px; width: 190px;">
+          <a onclick="partnersModal(2)"><div class="circ" style="background-image: url('./images/main_images/partners/indus-scuba.png'); width: auto;"></div></a>
+          <div class="teamName" style="text-align: center; cursor: pointer;"><a onclick="partnersModal(2)" style="text-decoration: none; color: white;">INDUS SCUBA</a></div>
+        </div>
+        <div class="smallGrid" style="margin-bottom: 20px; width: 190px">
+          <a href="https://oliveridleyproject.org/" target="_blank"><div class="circ" style="background-image: url('./images/main_images/partners/orp.png'); background-size: 170px 170px; width: auto; background-position: 9px 14px"></div></a>
+          <div class="teamName" style="text-align: center;"><a href="https://oliveridleyproject.org/" target="_blank" style="text-decoration: none; color: white;">ORP</a></div>
         </div>
       </div>
+    </div>
+    <!-- MODAL CONTENT -->
+    <div id="myModal0" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="partners-modal">
+          <div class="partners-img"><img src="./images/main_images/partners/arcadia.png" style="height: 120px;">
+          </div>
+          <h1>The Arcadia Philanthropic Trust</h1>
+          <br>
+          <div class="partners-text">Arcadia is a charitable fund of Lisbet Rausing and Peter Baldwin. Since October 2021, Arcadia is funding a 2-year pilot phase of MAHI’s IMAP project, to document the endangered maritime archeological
+            sites of the Sindh coastline in an open-access database. For more information on Arcadia and the work it supports, please visit <a href="https://www.arcadiafund.org.uk/" target="_blank" style="text-decoration: none; color: #134b86">https://www.arcadiafund.org.uk/</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="myModal1" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="partners-modal">
+          <div class="partners-img"><img src="./images/main_images/partners/eft.png" style="height: 120px;">
+          </div>
+          <h1>The Endowment Fund Trust
+            <br>
+            for Preservation of the Heritage of Sindh
+          </h1>
+          <br>
+          <div class="partners-text">EFT is an autonomous, not-for-profit organisation established by the Government of Sindh in 2008, dedicated to the preservation of Sindh’s artistic, tangible and intangible heritage. Since January 2021, EFT is supporting a preliminary,
+             desk-based phase of IMAP, to assess the archaeological potential of the Pakistani coastline. For more information, please visit <a href="https://eftsindh.com/" style="text-decoration: none; color: #134b86 ">https://eftsindh.com/</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="myModal2" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="partners-modal">
+          <div class="partners-img"><img src="./images/main_images/partners/orp.png" style="height: 120px;">
+          </div>
+          <h1>Indus Scuba
+          </h1>
+          <br>
+          <div class="partners-text">Indus Scuba is Pakistan’s first PADI Five Star Dive Centre, based in Karachi.
+            Indus Scuba provides logistical support for MAHI’s diver-based operations. For more information, please visit<a href="https://www.facebook.com/IndusScuba/" style="text-decoration: none; color: #134b86 ">https://www.facebook.com/IndusScuba/</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <footer>
+    <div class="border"></div>
+    <div id="contactUs" class="contact-container">
+      <div class="contactHeading">CONTACT US</div>
+      <div class="title-container">
+        <div class="info-container">
+          <img src="./images/main_images/icons/mail.png" style="width: 30px; height: 30px;">
+          <a style="text-decoration: none;" href="mailto: info@mahi.org"><div id="p1">info@mahi.org.pk</div></a>
+          <br>
+          <img src="./images/main_images/icons/phone.png" style="width: 17px; height: 17px; margin-left: 8px; top: 5px;">
+          <div id="p1" style="bottom: 3px; left: 5px;">+92 302 2555858</div>
+        </div>
+        <div class="socials-container">
+          <a href="https://www.facebook.com/MAHI.org.pk/" target="_blank"><img src="./images/main_images/icons/facebook.png" style="width: 50px; height: 50px; border-radius: 50%;"></a>
+          <a href="https://www.instagram.com/mahi.org.pk/?hl=en" target="_blank"><img src="./images/main_images/icons/instagram.png" style="width: 50px; height: 50px; border-radius: 50%; margin-left: 5px;"></a>
+          <a href="https://www.linkedin.com/company/mahi-org-pk/" target="_blank"><img src="./images/main_images/icons/linkedin.png" style="width: 50px; height: 50px; border-radius: 50%; margin-left: 5px;"></a>
+        </div>
+      </div>
+    <div class="copyright">Copyright &#169 2021 Maritime Archaeology and Heritage Institute (Private) Limited</div>
 
     </div>
-  </body>
+
+  </footer>
 
 
 
