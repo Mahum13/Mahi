@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/mission-statement.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script language="JavaScript" type="text/javascript" src="js/main.js"></script>
+
+    <!-- <script src="scripts/jquery-scrollfofixed-min.js" type="text/javascript"></script> -->
+    <link rel="icon" href="./images/main_images/logo.png">
+
+    <title>MAHI - Mission Statement</title>
+    <div id="graphicsContainer" class="graphics">
+      <div id="introVideo" class="introVid">
+        <video id="vid" preload="" autoplay="" muted="" playsinline="" loop="">
+          <source src="./images/main_images/fish.mp4" type="video/mp4">
+        </video>
+      </div>
+      <!-- NAV BAR -->
+      <div id="navigationBar" class="navbar">
+        <div class="tabs">
+          <a class="a" href="index.html">HOME</a>
+          <p>|</p>
+          <div class="dropdown">
+            <div class="a">ABOUT US</div>
+            <div class="dropdown-container">
+              <a class="dropdown-about" href="mission-statement.html" target="_blank">MISSION STATEMENT</a>
+              <a class="dropdown-about" href="images/main_images/MAHI_Profile_Document_2021.pdf" target="_blank" style="margin-top: 10px;">CAPABILITY STATEMENT</a>
+              <a class="dropdown-about" href="images/main_images/coe.pdf" target="_blank" style="margin-top: 10px;">CODE OF ETHICS</a>
+            </div>
+          </div>
+          <p>|</p>
+          <a class="a" href="index.html#team">OUR TEAM</a>
+          <p>|</p>
+          <div class="dropdown">
+            <a class="a" href="index.html#projects">PROJECTS</a>
+            <div class="dropdown-container">
+              <a class="dropdown-about" style="min-width: 60px; left: 5px; top: 5px;" href="imap.html" target="_blank">IMAP PHASE I</a>
+              <a class="dropdown-about" style="min-width: 60px; left: 5px; top: 10px;" href="imap-phase2.html" target="_blank">IMAP PHASE II</a>
+            </div>
+          </div>
+          <p>|</p>
+          <div class="dropdown">
+            <div class="a">CONTACT US</div>
+            <div class="dropdown-container" style="left: 20px">
+              <a class="dropdown-contact" href="https://www.instagram.com/mahi.org.pk/?hl=en" target="_blank"><img src="./images/main_images/icons/instagram.png" style="height: 60px; width: 60px;"></a>
+              <a class="dropdown-contact" href="https://www.facebook.com/MAHI.org.pk/" target="_blank"><img src="./images/main_images/icons/facebook.png" style="height: 60px; width: 60px;"></a>
+              <a class="dropdown-contact" href="https://www.linkedin.com/company/mahi-org-pk/" target="_blank"><img src="./images/main_images/icons/linkedin.png" style="height: 60px; width: 60px;"></a>
+              <a class="dropdown-contact" href="mailto: info@mahi.org.pk" target="_blank"><img src="./images/main_images/icons/mail.png" style="height: 60px; width: 60px;"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF NAV BAR -->
+      <!-- SIDE NAV BAR -->
+      <div id="sidenavbar" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- HOME -->
+        <a href="index.html">HOME</a>
+        <div style="height: 1px; width: 79%; margin-left: 25px; background-color: white;"></div>
+        <!-- ABOUT US -->
+        <a href="#aboutUs" style="margin-left: 30px; margin-bottom: 0; display: inline-block;">ABOUT US</a>
+        <span>
+          <button id="sidenav-about-btn-open" class="arrow-down" onclick="openSidenavDrop('sidenav-about-container', 'sidenav-about-btn-open', 'sidenav-about-btn-close')"></button>
+          <button id="sidenav-about-btn-close" class="arrow-up" onclick="closeSidenavDrop('sidenav-about-container', 'sidenav-about-btn-open', 'sidenav-about-btn-close')"></button>
+        </span>
+        <div id="sidenav-about-container" class="sidenav-dropdown-container">
+          <a class="sidenav-dropdown-content" href="mission-statement.html" target="_blank">MISSION STATMENT</a>
+          <a class="sidenav-dropdown-content" href="images/main_images/MAHI_Profile_Document_2021.pdf" target="_blank">CAPABILITY STATMENT</a>
+          <a class="sidenav-dropdown-content" href="images/main_images/coe.pdf" target="_blank">CODE OF ETHICS</a>
+        </div>
+        <div style="height: 1px; width: 79%; margin-left: 25px; background-color: white;"></div>
+        <!-- OUR TEAM -->
+        <a href="#team">OUR TEAM</a>
+        <div style="height: 1px; width: 79%; margin-left: 25px; background-color: white;"></div>
+        <!-- PROJECTS -->
+        <a href="#projects" style="margin-left: 30px; margin-bottom: 0; display: inline-block;">PROJECTS</a>
+        <span>
+          <button id="sidenav-project-btn-open" class="arrow-down" onclick="openSidenavDrop('sidenav-project-container', 'sidenav-project-btn-open', 'sidenav-project-btn-close')"></button>
+          <button id="sidenav-project-btn-close" class="arrow-up" onclick="closeSidenavDrop('sidenav-project-container', 'sidenav-project-btn-open', 'sidenav-project-btn-close')"></button>
+        </span>
+        <div id="sidenav-project-container" class="sidenav-dropdown-container">
+          <a class="sidenav-dropdown-content" href="imap.html" target="_blank">IMAP PHASE I</a>
+          <a class="sidenav-dropdown-content" href="imap-phase2.html" target="_blank">IMAP PHASE II</a>
+        </div>
+        <div style="height: 1px; width: 79%; margin-left: 25px; background-color: white;"></div>
+        <!-- CONTACT US -->
+        <a href="#contactUs" style="margin-left: 30px; margin-bottom: 0; display: inline-block;">CONTACT US</a>
+        <div class="sidenav-contact">
+          <a class="sidenav-contact-img" href="https://www.instagram.com/mahi.org.pk/?hl=en" target="_blank"><img src="./images/main_images/icons/instagram.png" style="width: 60px; height: 60px;"></a>
+          <a class="sidenav-contact-img" href="https://www.facebook.com/MAHI.org.pk/" target="_blank"><img src="./images/main_images/icons/facebook.png" style="width: 60px; height: 60px;"></a>
+          <a class="sidenav-contact-img" href="https://www.linkedin.com/company/mahi-org-pk/" target="_blank"><img src="./images/main_images/icons/linkedin.png" style="width: 60px; height: 60px;"></a>
+          <a class="sidenav-contact-img" href="mailto: info@mahi.org.pk" target="_blank"><img src="./images/main_images/icons/mail.png" style="width: 60px; height: 60px;"></a>
+        </div>
+        <div style="height: 1px; width: 79%; margin-left: 25px; background-color: white;"></div>
+      </div>
+      <div class="openSidenav"style="display: none; position: relative; float: left; left: 45px; top: 65px; font-size: 50px; color: white; cursor: pointer;" onclick="openNav()">&#9776;</div>
+      <script>
+        window.addEventListener("resize", resizeNavbar);
+        window.onload = adjustOnload();
+      </script>
+      <!-- END OF SIDE NAVBAR -->
+
+      <a href="index.html" id="logoDiv" class="logo"></a>
+      <!-- <script>fixedDiv()</script> -->
+    </div>
+  </head>
+
+  <body style="background-color: #134b86;">
+    <div class="statement-container">
+      <h1>MISSION STATEMENT</h1>
+      <div class="text-container">
+        <!-- <img src="./images/main_images/frame.png" style="position: absolute; max-width: inherit; min-height: inherit;"> -->
+        <!-- <div class="div2"> -->
+          <ul class="a">
+            <li><span>To<b> acknowledge </b> and <b> cultivate </b>the interconnectedness of the peoples, cultures, and shared maritime heritage of the Western Indian Ocean region;</li>
+            <br>
+            <li><span>To <b> research, record </b> and <b> protect </b>the threatened underwater, coastal and terrestrial maritime heritage of the region;</li>
+            <br>
+            <li><span>To <b> engage </b> and <b> educate </b> the public by highlighting and interpreting the rich maritime history of the region;</li>
+            <br>
+            <li><span>To <b> develop </b> initiatives that support sustainable goals within local communities that include heritage conservation, environmental protection, responsible tourism and the growth of blue economies;</li>
+            <br>
+            <li><span>To <b> build </b> relationships between local, regional, and international institutions to facilitate collaborative research and publication;</li>
+            <br>
+            <li><span>To <b> advocate, inform </b> and <b> make recommendations </b> to governments and relevant organisations on matters relating to best practices and policies for the protection of maritime heritage;</li>
+            <br>
+            <li><span>To <b> support </b> the aims, rules and articles of the UNESCO <i>Convention on the Protection of the Underwater Cultural Heritage </i> and the <i> United Nations Decade of Ocean Science for Sustainable Development (2021-2030).</i></li>
+          </ul>
+        <!-- </div> -->
+
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <div class="border"></div>
+    <div id="contactUs" class="contact-container">
+      <div class="contactHeading">CONTACT US</div>
+      <div class="title-container">
+        <div class="info-container">
+          <img src="./images/main_images/icons/mail.png" style="width: 30px; height: 30px;">
+          <a style="text-decoration: none;"href="mailto: info@mahi.org"><div id="p1">info@mahi.org.pk</div></a>
+          <br>
+          <img src="./images/main_images/icons/phone.png" style="width: 17px; height: 17px; margin-left: 8px; top: 5px;">
+          <div id="p1" style="bottom: 3px; left: 5px;">+92 302 2555858</div>
+        </div>
+        <div class="socials-container">
+          <a href="https://www.facebook.com/MAHI.org.pk/" target="_blank"><img src="./images/main_images/icons/facebook.png" style="width: 50px; height: 50px; border-radius: 50%;"></a>
+          <a href="https://www.instagram.com/mahi.org.pk/?hl=en" target="_blank"><img src="./images/main_images/icons/instagram.png" style="width: 50px; height: 50px; border-radius: 50%; margin-left: 5px;"></a>
+          <a href="https://www.linkedin.com/company/mahi-org-pk/" target="_blank"><img src="./images/main_images/icons/linkedin.png" style="width: 50px; height: 50px; border-radius: 50%; margin-left: 5px;"></a>
+        </div>
+      </div>
+    <div class="copyright">Copyright &#169 2021 Maritime Archaeology and Heritage Institute (Private) Limited</div>
+
+    </div>
+
+  </footer>
+
+</html>
